@@ -12,7 +12,7 @@
 Clone the repository and run the script from your terminal:
 
 ```bash
-git clone [https://github.com/DSRCyberS/LinuxGuard]
+git clone https://github.com/DSRCyberS/LinuxGuard
 cd LinuxGuard
 chmod +x linuxguard.sh
 sudo ./linuxguard.sh
