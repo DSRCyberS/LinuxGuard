@@ -1,32 +1,24 @@
 # 🛡️ LinuxGuard
 
-O **LinuxGuard** é um script de automação em Shell desenvolvido para reforçar, auditar e monitorizar parâmetros de segurança essenciais num sistema Linux (especialmente configurado e testado em Arch Linux).
+**LinuxGuard** is a lightweight Bash security auditing tool designed to inspect critical system file permissions on Linux systems (built and tested on **Arch Linux**).
 
-## ⚙️ Como Funciona a Função Principal
+## ⚙️ Key Features
 
-O script centraliza várias verificações de segurança numa única execução:
-* **Auditoria de Permissões:** Garante que ficheiros críticos do sistema não têm permissões de escrita expostas.
-* **Verificação de Rede:** Lista ligações ativas e portas abertas para detetar anomalias.
-* **Limpeza e Manutenção:** Procura por potenciais pacotes órfãos e resíduos que possam comprometer a integridade do sistema.
+- **Critical File Auditing:** Checks permissions and ownership of sensitive files such as `/etc/passwd` to ensure they are protected against unauthorized external edits.
+- **Symbolic & Numeric Analysis:** Displays both symbolic (`-rw-r--r--`) and octal (`644`) permission formats for quick verification.
 
-## 🚀 Pré-requisitos
+## 💻 Installation & Usage
 
-Para que todas as funções sejam executadas corretamente, certifique-se de que o utilizador tem privilégios no `sudoers`, já que a leitura de ficheiros do sistema requer acesso root.
+Clone the repository and run the script from your terminal:
 
-## 💻 Como Utilizar
+```bash
+git clone https://github.com
+cd LinuxGuard
+chmod +x linuxguard.sh
+sudo ./linuxguard.sh
+```
 
-Abra o terminal na pasta do repositório `LinuxGuard-main` e execute os seguintes comandos:
+## 🛠️ Built With
 
-1. **Dar permissão de execução ao executável:**
-   ```bash
-   chmod +x linuxguard.sh
-   ```
-
-2. **Executar o script de segurança:**
-   ```bash
-   sudo ./linuxguard.sh
-   ```
-
-## 🛠️ Tecnologias Utilizadas
-* **Bash Shell** (Scripting nativo de Linux)
-* **Git & GitHub** (Controlo de versão e alojamento)
+- **Bash Shell** (Native Linux Scripting)
+- **Git & GitHub** (Version Control)
